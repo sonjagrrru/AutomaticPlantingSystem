@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECE6B3"
+    tools:context=".fragments.home.HomeFragment">
+
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="271dp"
+        android:layout_height="541dp"
+        android:layout_marginTop="324dp"
+        android:src="@drawable/homeplant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:fontFamily="casual"
+        android:text="Dobro došli u SmartGarden!"
+        android:textAlignment="center"
+        android:textColor="#2E2D2D"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/choosePlant"
+        android:layout_width="236dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:background="#90D692"
+        android:fontFamily="sans-serif-black"
+        android:text="Podesite novu biljku"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/myPlant"
+        android:layout_width="236dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:background="#90D692"
+        android:fontFamily="sans-serif-black"
+        android:text="Profil moje biljke"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choosePlant" />
+</androidx.constraintlayout.widget.ConstraintLayout>

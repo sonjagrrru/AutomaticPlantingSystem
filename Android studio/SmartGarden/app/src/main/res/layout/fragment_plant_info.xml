@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/plantInfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECE6B3"
+    tools:context=".fragments.plantInfo.PlantInfo">
+
+    <TextView
+        android:id="@+id/myName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="sans-serif-black"
+        android:text="STANJE BILJKE"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/temperaturaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#5FCDFF"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myName">
+
+        <ImageView
+            android:id="@+id/tempImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/tempimg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tempText"
+            android:layout_width="236dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:textSize="30sp"
+            android:text="Temparatura"
+            app:layout_constraintLeft_toRightOf="@id/tempImg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tempCap"
+            android:layout_width="236dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Trenutna temperatura vazduha je optimalna za Vašu biljku i iznosi 20 stepeni!"
+            app:layout_constraintLeft_toRightOf="@id/tempImg"
+            app:layout_constraintTop_toBottomOf="@id/tempText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/vlaznostLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#7A5448"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="3dp"
+        app:contentPadding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperaturaLayout">
+
+        <ImageView
+            android:id="@+id/vlazImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/vlazimg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/vlazText"
+            android:layout_width="246dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:textSize="30sp"
+            android:text="Vlažnost zemljišta"
+            app:layout_constraintLeft_toRightOf="@id/vlazImg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/vlazCap"
+            android:layout_width="236dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Zalijte biljku!!!"
+            app:layout_constraintLeft_toRightOf="@id/vlazImg"
+            app:layout_constraintTop_toBottomOf="@id/vlazText" />
+
+        <Button
+            android:id="@+id/vlazSad"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="#D5B989"
+            android:fontFamily="sans-serif-black"
+            android:text="Zalij biljku"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/vlazImg"
+            app:layout_constraintTop_toBottomOf="@id/vlazCap" />
+
+        <Button
+            android:id="@+id/vlazAuto"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="#D5B989"
+            android:fontFamily="sans-serif-black"
+            android:text="Auto zalivanje"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/vlazSad"
+            app:layout_constraintTop_toBottomOf="@id/vlazCap"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/svetlostLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#FFF388"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="3dp"
+        app:contentPadding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vlaznostLayout">
+
+        <ImageView
+            android:id="@+id/svetImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/svetimg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/svetText"
+            android:layout_width="236dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:textSize="30sp"
+            android:text="Osvetljenje"
+            app:layout_constraintLeft_toRightOf="@id/svetImg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/svetCap"
+            android:layout_width="236dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Osvetljenje je optimalno!"
+            app:layout_constraintLeft_toRightOf="@id/svetImg"
+            app:layout_constraintTop_toBottomOf="@id/svetText" />
+
+        <Button
+            android:id="@+id/svetSad"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="#FF9800"
+            android:fontFamily="sans-serif-black"
+            android:text="Osvetli biljku"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/svetImg"
+            app:layout_constraintTop_toBottomOf="@id/svetCap" />
+
+        <Button
+            android:id="@+id/svetAuto"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="#FF9800"
+            android:fontFamily="sans-serif-black"
+            android:text="Auto osvetljenje"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/svetSad"
+            app:layout_constraintTop_toBottomOf="@id/svetCap"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

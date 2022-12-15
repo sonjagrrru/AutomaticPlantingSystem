@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_app_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.smartgarden.fragments.home.HomeFragment"
+        android:label="Glavni meni"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_choosePlantFragment"
+            app:destination="@id/choosePlantFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_myPlantFragment"
+            app:destination="@id/myPlantFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choosePlantFragment"
+        android:name="com.example.smartgarden.fragments.choosePlant.ChoosePlantFragment"
+        android:label="Izaberi vrstu biljke"
+        tools:layout="@layout/fragment_choose_plant" >
+        <action
+            android:id="@+id/action_choosePlantFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myPlantFragment"
+        android:name="com.example.smartgarden.fragments.myPlant.MyPlantFragment"
+        android:label="Profil biljke"
+        tools:layout="@layout/fragment_my_plant" >
+        <action
+            android:id="@+id/action_myPlantFragment_to_bluetoothFragment"
+            app:destination="@id/bluetoothFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/plantInfo"
+        android:name="com.example.smartgarden.fragments.plantInfo.PlantInfo"
+        android:label="Zdravstveno stanje biljke"
+        tools:layout="@layout/fragment_plant_info" />
+    <fragment
+        android:id="@+id/bluetoothFragment"
+        android:name="com.example.smartgarden.fragments.bluetooth.BluetoothFragment"
+        android:label="Podešavanje Bluetootha"
+        tools:layout="@layout/fragment_bluetooth" >
+        <action
+            android:id="@+id/action_bluetoothFragment_to_plantInfo"
+            app:destination="@id/plantInfo" />
+    </fragment>
+</navigation>
